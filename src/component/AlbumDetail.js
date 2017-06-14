@@ -6,6 +6,7 @@ import CardSection from './CardSection';
 
 const AlbumDetail = (props) => {
 
+
     const {title, artist, thumbnail_image, image} = props.details;                      /*--Notice Here*/
     console.log("Hey man, I'm entering Album Detail right now!!.\n You want in ?");
     return (
@@ -20,13 +21,16 @@ const AlbumDetail = (props) => {
                   <Text>{artist}</Text>
               </View>
           </CardSection>
+
           <CardSection>
-            <Image style={styles.imageStyle} source={{uri: image}}/>
+              <Image style={styles.imageStyle} source={{uri: image}}/>
           </CardSection>
 
-          <Button title="Buy Now!!" />
+              <Button style={{width:null, margin:10}} onPress={() => {console.log(title)}} title="Buy Now!!!" />
       </Card>
 
+        //Remember the button can be replaced by a new js file
+        //Whose parent tag is <TouchableOpacity> which is pretty cool
 
     );
 
@@ -53,9 +57,8 @@ const styles = {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-
       height: 325,
-        width: 335
+        width: 325
     },
     thumbnailStyle:{
         borderRadius: 8,
