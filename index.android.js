@@ -2,7 +2,7 @@
 
 // Import a library to help create a component
 import React from 'react';
-import { Text, AppRegistry, View } from 'react-native';
+import { Text, AppRegistry, View, ScrollView } from 'react-native';
 import Header from './src/component/header';
 import AlbumList from './src/component/AlbumList';
 
@@ -10,12 +10,11 @@ import AlbumList from './src/component/AlbumList';
 
 //Create a component
 const App = () => (                           // THIS SHOULD ALWAYS HAVE ONLY ONE MAIN PARENT TAG. LIKE SO. THERE CAN BE MULTIPLE CHILDREN, BUT ONLY ONE PARENT
-    <View>
+    <ScrollView>
       <Header headerText={'Random Stuff'}/>
       <AlbumList/>
-    </View>
+    </ScrollView>
 );
-
 
 
 //Render it to the device
