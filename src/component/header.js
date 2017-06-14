@@ -1,15 +1,15 @@
 import React from 'react';
-//import ReactNative from 'react-native';
 import {Text, View} from 'react-native';
 
 //make component
 const Header = (props) => {
     console.log("Hey man, What's up :3");
     //Here props takes whatever parameter passed to the Header tag in the index file.
-    const { textStyle, viewStyle } = styles;
+    const {headerText} = props;     //Make a note of destructuring.
+    const { textStyle, viewStyle } = styles; //Here too
     return (
         <View style={viewStyle}>
-            <Text style={textStyle}>{props.headerText}</Text>
+            <Text style={textStyle}>{headerText}</Text>
         </View>
     );
 };
@@ -30,7 +30,7 @@ const styles = {
 
         fontSize: 25
     }
-}
+};
 
 //render it
 export default Header;

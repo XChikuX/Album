@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import ReactNative, { View, Text } from 'react-native';
-import Card from './Card';
+import  { View } from 'react-native';
 import axios from 'axios';
 import AlbumDetail from './AlbumDetail'
 

@@ -7,13 +7,14 @@ const CardSection = (props) => {
             {props.children}
         </View>
     );
-}
+};
 
 
 const styles = {
     containerStyle: {
         borderBottomWidth: 1,
         padding: 5,
+        paddingBottom: 10,
         backgroundColor: '#fff',
         justifyContent: 'flex-start',
         flexDirection: 'row',
@@ -21,6 +22,6 @@ const styles = {
         position: 'relative'
     }
 
-}
+};
 
 export default CardSection;
