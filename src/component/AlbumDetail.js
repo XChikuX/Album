@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View, Image, Button}  from 'react-native';
+import {Text, View, Image, Button, Linking}  from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
 
@@ -7,7 +7,7 @@ import CardSection from './CardSection';
 const AlbumDetail = (props) => {
 
 
-    const {title, artist, thumbnail_image, image} = props.details;                      /*--Notice Here*/
+    const {title, artist, thumbnail_image, image, url} = props.details;                      /*--Notice Here*/
     console.log("Hey man, I'm entering Album Detail right now!!.\n You want in ?");
     return (
       <Card>
@@ -26,7 +26,9 @@ const AlbumDetail = (props) => {
               <Image style={styles.imageStyle} source={{uri: image}}/>
           </CardSection>
 
-              <Button style={{width:null, margin:10}} onPress={() => {console.log(title)}} title="Buy Now!!!" />
+              <Button style={{width:null, margin:10}} onPress={() => Linking.openURL(url)} >
+                  Buy Now!!!
+              </Button>
       </Card>
 
         //Remember the button can be replaced by a new js file
